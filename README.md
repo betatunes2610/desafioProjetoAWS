@@ -1,4 +1,4 @@
-# Bootcamp realizado em parceria do Santander, AWS e Dio
+# Bootcamp realizado em parceria com o Santander, AWS e Dio
 Este laboratório tem como objetivo consolidar meusconhecimentos em gerenciamento de instâncias EC2 na AWS. 
 
 # Fundamentos da AWS ☁️
