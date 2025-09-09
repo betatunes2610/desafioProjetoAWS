@@ -10,10 +10,6 @@ Conceitos Principais
 
 Boas Práticas
 
-Comandos Úteis
-
-Exemplo de Fluxo de Trabalho
-
 Recursos e Documentação
 
 💡 Sobre
@@ -42,36 +38,12 @@ Security Groups: firewall virtual que controla tráfego de entrada/saída.
 
 Utilizar tags para identificar instâncias e facilitar a organização.
 
-Restringir acessos em Security Groups (permitir apenas portas necessárias).
-
 Utilizar IAM Roles ao invés de armazenar credenciais na instância.
 
 Criar Snapshots regulares para backup de volumes EBS.
 
 Encerrar ou parar instâncias não utilizadas para evitar custos.
 
-🖥️ Comandos Úteis
-
-Gerenciar instâncias via AWS CLI:
-# Listar instâncias
-aws ec2 describe-instances
-
-# Iniciar instância
-aws ec2 start-instances --instance-ids i-1234567890abcdef0
-
-# Parar instância
-aws ec2 stop-instances --instance-ids i-1234567890abcdef0
-
-# Encerrar instância
-aws ec2 terminate-instances --instance-ids i-1234567890abcdef0
-
-🚀 Exemplo de Fluxo de Trabalho
-
-Criar uma instância EC2 usando uma AMI.
-
-Acessar a aplicação pelo navegador utilizando o IP público.
-
-Criar um snapshot do volume EBS para backup.
 
 📚 Recursos e Documentação
 
