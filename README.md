@@ -1,91 +1,84 @@
-# Bootcamp realizado em parceria com o Santander, AWS e Dio
-Este laboratório tem como objetivo consolidar meus conhecimentos em gerenciamento de instâncias EC2 na AWS. 
+📌 Gerenciamento de Instâncias EC2 na AWS
 
-# Fundamentos da AWS ☁️
+Este repositório tem como objetivo consolidar os conhecimentos sobre o Amazon EC2 (Elastic Compute Cloud), abordando conceitos fundamentais, boas práticas e comandos úteis para administração de instâncias na AWS.
 
-Este repositório tem como objetivo apresentar os principais fundamentos da **Amazon Web Services (AWS)**, a compreender os conceitos básicos e os principais serviços oferecidos pela nuvem da AWS.
+📖 Índice
 
----
+Sobre
 
-## 📌 O que é a AWS?
+Conceitos Principais
 
-A **Amazon Web Services (AWS)** é a maior provedora de computação em nuvem do mundo, oferecendo serviços sob demanda como:
-- **Computação** (servidores virtuais, containers, serverless)
-- **Armazenamento** (blobs, arquivos, bancos de dados)
-- **Redes e entrega de conteúdo**
-- **Segurança, monitoramento e ferramentas de gestão**
+Boas Práticas
 
-O modelo de cobrança: **você paga apenas pelo que utilizar.**
+Comandos Úteis
 
----
+Exemplo de Fluxo de Trabalho
 
-## 🏗️ Conceitos Fundamentais
+Recursos e Documentação
 
-### ☁️ Regiões e Zonas de Disponibilidade
-- **Regiões**: Áreas geográficas (ex: `us-east-1`, `sa-east-1`).
-- **Zonas de Disponibilidade (AZs)**: Datacenters isolados dentro de uma região.
+💡 Sobre
+
+O Amazon EC2 fornece capacidade de computação escalável na nuvem da AWS.
+Com ele, é possível:
+
+Lançar e gerenciar servidores virtuais (“instâncias”);
+
+Escolher sistemas operacionais, CPU, memória e armazenamento;
+
+Aumentar ou reduzir a capacidade sob demanda;
+
+Integrar-se a outros serviços da AWS (S3, RDS, VPC, etc.).
+
+🗂 Conceitos Principais
+
+AMI (Amazon Machine Image): imagem usada para iniciar instâncias.
+
+Tipos de instância: otimizadas para computação, memória ou armazenamento.
+
+Security Groups: firewall virtual que controla tráfego de entrada/saída.
 
 
-### 🔐 Responsabilidade Compartilhada
-- **AWS**: Responsável pela segurança da nuvem (infraestrutura, hardware, rede).
-- **Cliente**: Responsável pela segurança **na nuvem** (configuração, dados, permissões).
+✅ Boas Práticas
 
-### 💰 Modelo de Preços
-- **On-Demand**: paga pelo uso (sem contrato).
-- **Reserved Instances**: reserva de longo prazo com desconto.
-- **Spot Instances**: uso de capacidade ociosa com desconto maior.
+Utilizar tags para identificar instâncias e facilitar a organização.
 
----
+Restringir acessos em Security Groups (permitir apenas portas necessárias).
 
-## 🚀 Principais Serviços
+Utilizar IAM Roles ao invés de armazenar credenciais na instância.
 
-### 🔹 Computação
-- **EC2**: Máquinas virtuais escaláveis.
-- **Lambda**: Funções serverless.
-- **ECS / EKS**: Containers gerenciados.
+Criar Snapshots regulares para backup de volumes EBS.
 
-### 🔹 Armazenamento
-- **S3**: Armazenamento de objetos.
-- **EBS**: Volumes de armazenamento para EC2.
-- **Glacier**: Arquivamento de longo prazo.
+Encerrar ou parar instâncias não utilizadas para evitar custos.
 
-### 🔹 Banco de Dados
-- **RDS**: Banco de dados relacional gerenciado.
-- **DynamoDB**: Banco de dados NoSQL totalmente gerenciado.
-- **Aurora**: Banco de dados compatível com MySQL/PostgreSQL, otimizado para nuvem.
+🖥️ Comandos Úteis
 
-### 🔹 Redes
-- **VPC**: Rede virtual privada.
-- **Route 53**: DNS e roteamento.
-- **CloudFront**: CDN para entrega de conteúdo.
+Gerenciar instâncias via AWS CLI:
+# Listar instâncias
+aws ec2 describe-instances
 
-### 🔹 Segurança e Identidade
-- **IAM**: Gerenciamento de usuários e permissões.
-- **KMS**: Gerenciamento de chaves de criptografia.
-- **WAF**: Firewall de aplicações web.
+# Iniciar instância
+aws ec2 start-instances --instance-ids i-1234567890abcdef0
 
-### 🔹 Monitoramento e Gestão
-- **CloudWatch**: Monitoramento de métricas e logs.
-- **CloudTrail**: Registro de auditoria das ações na conta.
-- **Config**: Conformidade e governança.
+# Parar instância
+aws ec2 stop-instances --instance-ids i-1234567890abcdef0
 
----
+# Encerrar instância
+aws ec2 terminate-instances --instance-ids i-1234567890abcdef0
 
-## 📚 Melhores Práticas
-- Organizar permissões com **IAM** (princípio do menor privilégio).
-- Usar **MFA (Multi-Factor Authentication)** na conta root.
-- Configurar **tags** para organizar recursos.
-- Monitorar gastos com **AWS Cost Explorer**.
-- Sempre pensar em **alta disponibilidade** e **escalabilidade**.
+🚀 Exemplo de Fluxo de Trabalho
 
----
+Criar uma instância EC2 usando uma AMI.
 
-## 📖 Referências
-- [Documentação Oficial da AWS](https://docs.aws.amazon.com/)
-- [AWS Training and Certification](https://aws.amazon.com/training/)
-- [Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
+Acessar a aplicação pelo navegador utilizando o IP público.
 
----
+Criar um snapshot do volume EBS para backup.
 
-Feito com ☁️ para quem quer começar sua jornada na nuvem com a AWS.
+📚 Recursos e Documentação
 
+Documentação Oficial EC2
+
+AWS CLI Reference
+
+Melhores práticas de segurança na AWS
+
+👉 Esse README pode servir tanto como guia de estudo quanto documentação de um repositório de exemplos práticos.
